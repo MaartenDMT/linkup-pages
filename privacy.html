@@ -45,7 +45,8 @@
       <p>Plans show the place selected by their host. For private plans, the public view shows an area of about 1 km, while the exact address is available to guests the host approves.</p>
       <p>Asks use a rounded area of about 1 km and do not show who posted them. You can choose a place for an ask instead of using your current location.</p>
       <p>Tonight Mode is off by default. If you enable it, your phone sends location to Linkup. Linkup stores an area of about 1 km, shares it only with the friends and groups you select, and removes the location within 15 minutes after the session ends.</p>
-      <p>Google Maps on Android receives the map area you view. Your phone's Google geocoder receives place-search text and the location you select for address lookup.</p>
+      <p>Google Maps on Android receives the map area you view. <a href="https://developers.google.com/maps/documentation/android-sdk/play-data-disclosure">Google's published information for its latest Android Maps SDK</a> says it collects request and device metadata, the device IP address, crash metrics and stack traces, and a Maps-specific pseudonymous identifier. It may also collect map interactions such as panning and zooming. Google says it uses this information to maintain and improve its services.</p>
+      <p>On Android, place search and address lookup pass the search text or selected location to the phone's geocoder. The Android geocoder may use a network service. On a Google-backed device, that can involve Google.</p>
     </section>
 
     <section>
@@ -61,9 +62,10 @@
     </section>
 
     <section>
-      <h2>Service providers</h2>
-      <p>Sign-in uses Linkup's own OAuth flow with Google. Linkup manages its own account and session records. Supabase hosts Linkup's database and server functions. Push notifications use Expo, Google, and Apple. Google Maps and Google's geocoder provide maps and place lookup on Android.</p>
-      <p>These providers process information needed to perform their services under their own terms and privacy policies.</p>
+      <h2>Services involved</h2>
+      <p>Sign-in uses Linkup's own OAuth flow with Google. Linkup manages its own account and session records. Supabase hosts Linkup's database and server functions. On Android, Google Maps and the phone's geocoder provide maps and place lookup.</p>
+      <p>If you enable push notifications, Linkup stores an Expo push token and sends the notification token and notification content through Expo for delivery through Google Firebase Cloud Messaging on Android. <a href="https://firebase.google.com/docs/android/play-data-disclosure">Google's Firebase Android disclosure</a> says the messaging SDK collects the app version and Firebase user agent, and its Firebase Installations component generates a per-installation identifier. Linkup does not use Firebase Authentication to manage accounts.</p>
+      <p>These services handle data under their own terms and privacy policies, including Google's use of Maps SDK information to maintain and improve Google services.</p>
     </section>
 
     <section>
