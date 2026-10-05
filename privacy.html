@@ -25,7 +25,7 @@
     <p class="eyebrow">Your information</p>
     <h1>Linkup Privacy Policy</h1>
     <p class="lead">Learn what Linkup collects, how information is used and shared, and how long it is kept.</p>
-    <p class="small-note">Last updated: 4 October 2026</p>
+    <p class="small-note">Last updated: 5 October 2026</p>
 
     <section>
       <h2>Who provides Linkup</h2>
@@ -58,13 +58,14 @@
     <section>
       <h2>Analytics and errors</h2>
       <p>Linkup records basic usage events, such as when a plan is created, in its own database. While you are signed in, these events are linked to your account. When an error occurs, Linkup may store a short error message of up to 200 characters to help fix the issue.</p>
-      <p>These events do not include message text, names, or exact locations. Linkup does not use third-party advertising trackers or ad networks and does not sell your data.</p>
+      <p>Linkup filters some personal information from usage events. Short diagnostic error messages may still contain personal information from an error response. Linkup does not use third-party advertising trackers or ad networks and does not sell your data.</p>
     </section>
 
     <section>
       <h2>Services involved</h2>
       <p>Sign-in uses Linkup's own OAuth flow with Google. Linkup manages its own account and session records. Supabase hosts Linkup's database and server functions. On Android, Google Maps and the phone's geocoder provide maps and place lookup.</p>
       <p>If you enable push notifications, Linkup stores an Expo push token and sends the notification token and notification content through Expo for delivery through Google Firebase Cloud Messaging on Android. <a href="https://firebase.google.com/docs/android/play-data-disclosure">Google's Firebase Android disclosure</a> says the messaging SDK collects the app version and Firebase user agent, and its Firebase Installations component generates a per-installation identifier. Linkup does not use Firebase Authentication to manage accounts.</p>
+      <p>The Firebase messaging SDK can generate a registration token and installation identifier when the app starts, before Android notification permission is granted. Android notification permission controls whether notifications can be shown.</p>
       <p>These services handle data under their own terms and privacy policies, including Google's use of Maps SDK information to maintain and improve Google services.</p>
     </section>
 
