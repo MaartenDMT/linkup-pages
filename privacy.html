@@ -84,6 +84,19 @@ Linkup Pro removes ads.</p>
     </section>
 
     <section>
+      <h2>Plan photos, in versions that support uploads</h2>
+      <p>Photo uploads are optional. Linkup re-encodes chosen images as JPEG before upload and rejects photos with embedded GPS information. Full and thumbnail copies are stored in a private Cloudflare R2 bucket and delivered through links that expire after minutes.</p>
+      <p>The album is available on the plan page to its host, cohosts and approved members. For a live public plan, its host or cohost can choose a cover that appears in public discovery and shared-link previews. Choosing a public cover makes that photo publicly visible.</p>
+      <p>Photos are kept until the uploader, host or a moderator removes them, the plan is deleted, or the uploader deletes their account. Storage-file cleanup can finish after the associated database record is removed.</p>
+    </section>
+
+    <section>
+      <h2>Purchases in versions that enable Linkup Pro or boosts</h2>
+      <p>Google Play handles Android payments. Linkup and RevenueCat use the Linkup account ID, product and transaction or receipt details, subscription status and renewal or end dates to validate purchases, restore access, synchronize paid features and analyze purchases. RevenueCat processes purchase-related customer records for Linkup.</p>
+      <p>You can include purchase-related customer information in a deletion request to Linkup's support address. Google Play's billing records remain subject to Google's own privacy and retention policies. Core Linkup features can be used without a purchase.</p>
+    </section>
+
+    <section>
       <h2>Services involved</h2>
       <p>Sign-in uses Linkup's own OAuth flow with Google. Linkup manages its own account and session records. Supabase hosts Linkup's database and server functions. On Android, Google Maps and the phone's geocoder provide maps and place lookup.</p>
       <p>If you enable push notifications, Linkup stores an Expo push token and sends the notification token and notification content through Expo for delivery through Google Firebase Cloud Messaging on Android. <a href="https://firebase.google.com/docs/android/play-data-disclosure">Google's Firebase Android disclosure</a> says the messaging SDK collects the app version and Firebase user agent, and its Firebase Installations component generates a per-installation identifier. Linkup does not use Firebase Authentication to manage accounts.</p>
