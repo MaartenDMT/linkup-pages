@@ -75,6 +75,15 @@ Linkup Pro removes ads.</p>
     </section>
 
     <section>
+      <h2>Optional selfie verification, when enabled</h2>
+      <p>Selfie verification is optional, free and available only to adults aged 18 or older. A checkmark means the account passed a live selfie check; it does not confirm a person's name, age, identity or safety. You can use Linkup's core features without verifying.</p>
+      <p>If you choose to verify, Linkup asks for your explicit consent before opening Didit's hosted verification page in your browser. Didit processes a short selfie and related face data to check that a live person is present. Linkup does not request an identity document, face matching or Face Search, and does not receive or store your selfie, video or face template. Didit may also process technical and security information such as your IP address, browser and device data. Linkup has opted its organization out of Didit's future model-training use.</p>
+      <p>Didit processes verification data for Linkup under a data processing agreement. Read <a href="https://didit.me/terms/verification-privacy-notice/">Didit's Verification Privacy Notice</a>, <a href="https://didit.me/terms/biometric-data-policy/">Biometric Data Retention and Destruction Policy</a> and <a href="https://didit.me/terms/identity-verification/">End User Terms</a>. Didit's primary processing infrastructure is in the EEA; protected transfers outside the EEA may occur under its agreement.</p>
+      <p>After a final result or an expired verification link, Linkup asks Didit to delete the session and records when Didit applies the deletion instruction. That receipt does not establish that every downstream copy has finished purging. Didit's one-month retention setting is a backstop, and biometric-template retention is off.</p>
+      <p>Linkup keeps the result, date, Didit session reference and deletion-retry state. Attempt records are normally removed 30 days after creation once the deletion instruction is applied. Unresolved deletion records remain private for review. You can remove your checkmark at any time; attempt records remain for rate limiting or deletion review. Deleting your account removes the checkmark and removes your account link from unresolved deletion records.</p>
+    </section>
+
+    <section>
       <h2>Services involved</h2>
       <p>Sign-in uses Linkup's own OAuth flow with Google. Linkup manages its own account and session records. Supabase hosts Linkup's database and server functions. On Android, Google Maps and the phone's geocoder provide maps and place lookup.</p>
       <p>If you enable push notifications, Linkup stores an Expo push token and sends the notification token and notification content through Expo for delivery through Google Firebase Cloud Messaging on Android. <a href="https://firebase.google.com/docs/android/play-data-disclosure">Google's Firebase Android disclosure</a> says the messaging SDK collects the app version and Firebase user agent, and its Firebase Installations component generates a per-installation identifier. Linkup does not use Firebase Authentication to manage accounts.</p>
@@ -92,7 +101,7 @@ Linkup Pro removes ads.</p>
     <section>
       <h2>Your choices and account deletion</h2>
       <p>You can turn notifications and Tonight Mode on or off, block people, and delete your account from the You area in Linkup. You may also contact the publisher to ask for a copy or correction of your information. Email-assisted deletion is described on the <a href="delete-account.html">account deletion page</a>.</p>
-      <p>When an account is deleted, Linkup removes the account profile, linked sign-in records and sessions, plans, asks, messages, friends, groups, notifications, push tokens, and other account data. Plans hosted by the deleted account are removed for everyone. Safety report evidence may remain as described above.</p>
+      <p>When an account is deleted, Linkup removes the account profile, linked sign-in records and sessions, plans, asks, messages, friends, groups, notifications, push tokens, and other account data. Plans hosted by the deleted account are removed for everyone. Safety report evidence may remain as described above. Unresolved verification-deletion records also remain without their account link until reviewed.</p>
     </section>
 
     <section>
@@ -107,3 +116,4 @@ Linkup Pro removes ads.</p>
   </footer>
 </body>
 </html>
+
